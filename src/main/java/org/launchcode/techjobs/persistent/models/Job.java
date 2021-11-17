@@ -3,12 +3,9 @@ package org.launchcode.techjobs.persistent.models;
 import javax.persistence.*;
 
 @Entity
-public class Job{
+public class Job extends AbstractEntity{
 
-    @Id
-    @GeneratedValue
-    private int id;
-
+    @ManyToOne
     private String name;
 
     private String employer;
