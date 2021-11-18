@@ -9,10 +9,10 @@ import java.util.List;
 @Entity
 public class Skill extends AbstractEntity {
 
-    @Size(min=1, max=500, message = "Description must be between 1 and 500 characters")
+    @Size(min=1, max=400, message = "Description must be between 1 and 400 characters")
     private String description;
 
-    @ManyToMany(mappedBy = "skills")
+    @ManyToMany(mappedBy="skills")
     private List<Job> jobs = new ArrayList<>();
 
     public Skill() {};
